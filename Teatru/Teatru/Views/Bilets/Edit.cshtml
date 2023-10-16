@@ -1,0 +1,49 @@
+﻿@model Teatru.Models.Bilet
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Bilet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="spectacol" class="control-label"></label>
+                <input asp-for="spectacol" class="form-control" />
+                <span asp-validation-for="spectacol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rand" class="control-label"></label>
+                <input asp-for="rand" class="form-control" />
+                <span asp-validation-for="rand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="numar" class="control-label"></label>
+                <input asp-for="numar" class="form-control" />
+                <span asp-validation-for="numar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="data" class="control-label"></label>
+                <input asp-for="data" class="form-control" />
+                <span asp-validation-for="data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

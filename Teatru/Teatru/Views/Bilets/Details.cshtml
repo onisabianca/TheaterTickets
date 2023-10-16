@@ -1,0 +1,42 @@
+﻿@model Teatru.Models.Bilet
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bilet</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.spectacol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.spectacol)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rand)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rand)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.numar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.numar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.data)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
